@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Cubagem</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Calculadora de Cubagem</h1>
+            <p>&COPY; Jonatha Lopes 2024</p>
+        </header>
+
+        <main class="calculator">
+            <div class="input-section">
+                <div class="unit-selector">
+                    <label for="unit">Unidade de Medida:</label>
+                    <select id="unit" name="unit">
+                        <option value="cm">Centímetros (cm)</option>
+                        <option value="m">Metros (m)</option>
+                    </select>
+                </div>
+
+                <div class="measure-inputs">
+                    <div class="input-group">
+                        <label for="altura">Altura:</label>
+                        <input type="number" id="altura" name="altura" placeholder="Digite a altura" min="0" step="0.01">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="largura">Largura:</label>
+                        <input type="number" id="largura" name="largura" placeholder="Digite a largura" min="0" step="0.01">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="comprimento">Comprimento:</label>
+                        <input type="number" id="comprimento" name="comprimento" placeholder="Digite o comprimento" min="0" step="0.01">
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button id="calcular" class="primary-button">Calcular Volume</button>
+                    <button id="limpar" class="secondary-button">Limpar Campos</button>
+                </div>
+            </div>
+
+            <div class="result-section">
+                <div class="result-box">
+                    <h2>Resultado</h2>
+                    <div id="resultado-volume" class="volume-result">
+                        <span class="result-value">0</span>
+                        <span class="result-unit">m³</span>
+                    </div>
+                </div>
+
+                <div class="history-section">
+                    <h3>Histórico de Cálculos</h3>
+                    <ul id="historico" class="history-list"></ul>
+                </div>
+            </div>
+        </main>
+
+        <div id="error-message" class="error-message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

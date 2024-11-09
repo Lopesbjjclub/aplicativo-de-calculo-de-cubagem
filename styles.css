@@ -1,0 +1,221 @@
+/* Reset e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color:black;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgb(186, 218, 139);
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Estilos do Cabeçalho */
+.header {
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f0f2f5;
+}
+
+.header h1 {
+    color: #2c3e50;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: black;
+    font-size: 1.1em;
+}
+
+/* Seção da Calculadora */
+.calculator {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Estilos dos Inputs */
+.input-section {
+    padding: 20px;
+}
+
+.unit-selector {
+    margin-bottom: 25px;
+}
+
+.unit-selector select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    background-color: #e0e0e0;
+}
+
+.measure-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.input-group input {
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1.1em;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+/* Botões */
+.button-group {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.primary-button, .secondary-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+    flex: 1;
+}
+
+.primary-button {
+    background-color: #3498db;
+    color: white;
+}
+
+.secondary-button {
+    background-color: #e0e0e0;
+    color: #2c3e50;
+}
+
+.primary-button:hover, .secondary-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Seção de Resultados */
+.result-section {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.result-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.result-box h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.volume-result {
+    font-size: 2.5em;
+    color: #3498db;
+    font-weight: bold;
+}
+
+.result-unit {
+    font-size: 0.6em;
+    color: #7f8c8d;
+    margin-left: 5px;
+}
+
+/* Histórico */
+.history-section {
+    margin-top: 30px;
+}
+
+.history-section h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.history-list {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.history-list li {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #2c3e50;
+}
+
+/* Mensagem de Erro */
+.error-message {
+    color: #e74c3c;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 6px;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+    background-color: #fdeaea;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .calculator {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 1.8em;
+    }
+
+    .volume-result {
+        font-size: 2em;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}
